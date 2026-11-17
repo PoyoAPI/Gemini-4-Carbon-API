@@ -1,0 +1,14 @@
+{
+  "model": "gemini-4-carbon",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a senior security engineer. Be precise and cite line numbers."
+    },
+    {
+      "role": "user",
+      "content": "Review this Python handler for vulnerabilities and propose a patched version:\n\nimport sqlite3\n\ndef get_user(conn, username):\n    cur = conn.cursor()\n    cur.execute(\"SELECT * FROM users WHERE name = '\" + username + \"'\")\n    return cur.fetchone()"
+    }
+  ],
+  "max_tokens": 2048
+}
